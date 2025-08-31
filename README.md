@@ -53,3 +53,26 @@ After extraction, convert the main SAS dataset into a CSV for easier use in R:
 
 ```bash
 Rscript cleaning_scripts/convert_sas_to_csv.R
+
+## Project Updates – FRSS Chromebook Data
+
+The following updates have been made to the FRSS Chromebook dataset and visualization workflow:
+
+1. **Column Renaming and Cleaning**
+   - `LEVEL3` → `INSTRUCTIONAL_LEVEL` (1 = Elementary, 2 = Middle, 3 = High/Other)
+   - `SIZCL2` → `ENROLLMENT_LEVEL` (1 = <300, 2 = 300–499, 3 = 500–999, 4 = 1,000+)
+   - `P_Q4TOT` → `COMPUTERS_PER_STUDENT` (calculated as total computers divided by total enrollment)
+   - Removed extraneous or imputed columns for clarity
+   - Converted categorical codes to descriptive string labels for easier interpretation
+
+2. **Visualization Updates**
+   - Two separate visualizations were created:
+     1. **Computers per student by instructional level**
+     2. **Computers per student by enrollment level**
+   - Independent variables (`INSTRUCTIONAL_LEVEL` and `ENROLLMENT_LEVEL`) are plotted on the x-axis; dependent variable (`COMPUTERS_PER_STUDENT`) is plotted on the y-axis.
+
+3. **Assumptions & Notes**
+   - The dataset does not distinguish between Chromebooks and other types of computers; all student-use computers are included.
+   - Approximate numbers are used for computers and enrollment due to public-use file confidentiality restrictions.
+
+These updates improve readability, clarity, and usability of the dataset and visualizations for analysis of educational technology access.
