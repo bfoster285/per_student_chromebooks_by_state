@@ -46,3 +46,10 @@ Rscript cleaning_scripts/extraction_script.R \
 data/raw/2022011_FRSS_PUF_DAT.zip \
 data/raw/2022011_FRSS_PUF_DOC.zip \
 data/raw/2022011_FRSS_PUF_FULL.zip
+
+### Converting SAS Data to CSV
+
+After extraction, convert the main SAS dataset into a CSV for easier use in R:
+
+```bash
+Rscript cleaning_scripts/convert_sas_to_csv.R
