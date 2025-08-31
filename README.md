@@ -22,3 +22,27 @@ This project serves as a data analysis portfolio piece, demonstrating:
 ## Data Source
 
 NCES FRSS 110 – Public School Use of Educational Technology (2019–20)
+
+## Data Extraction Script
+
+### Script
+`Rscript cleaning_scripts/extraction_script.R`
+
+### Purpose
+- Extracts the contents of NCES FRSS 110 ZIP files into a folder for further processing.
+- Prepares the raw data files, documentation, and SAS scripts for analysis.
+
+### Prerequisites
+- Ensure that the ZIP files are placed in the `data/raw/` directory before running the script:
+  - `2022011_FRSS_PUF_DAT.zip`
+  - `2022011_FRSS_PUF_DOC.zip`
+  - `2022011_FRSS_PUF_FULL.zip`
+
+### Usage
+Run the script from the terminal as follows:
+
+```bash
+Rscript cleaning_scripts/extraction_script.R \
+data/raw/2022011_FRSS_PUF_DAT.zip \
+data/raw/2022011_FRSS_PUF_DOC.zip \
+data/raw/2022011_FRSS_PUF_FULL.zip

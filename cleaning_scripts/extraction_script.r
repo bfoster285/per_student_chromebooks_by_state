@@ -3,7 +3,7 @@ if(!require("utils")) install.packages("utils")
 
 # Define directories
 zip_dir <- "data/raw/"
-extract_dir <- "data/extracted/"
+extract_dir <- "../data/processed/extracted/"
 
 # List all ZIP files in raw folder
 zip_files <- list.files(zip_dir, pattern = "\\.zip$", full.names = TRUE)
